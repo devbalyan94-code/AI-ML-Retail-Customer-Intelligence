@@ -5,9 +5,20 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 st.title("AI-ML Retail Customer Intelligence System")
+# Sidebar file upload
+st.sidebar.header("Upload Your Dataset")
 
+uploaded_file = st.sidebar.file_uploader(
+    "Upload a CSV file",
+    type=["csv"]
+)
 # Load data
-customer_data = pd.read_csv("QVI_purchase_behaviour.csv")
+if uploaded_file is not None:
+    customer_data = pd.read_csv(uploaded_file)
+    st.success("Custom dataset uploaded successfully!")
+else:
+    customer_data = pd.read_csv("QVI_purchase_behaviour.csv")
+
 transaction_data = pd.read_excel("QVI_transaction_data.xlsx")
 
 # Merge datasets
