@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 
 st.title("AI-ML Retail Customer Intelligence System")
+st.info("You can upload your own retail CSV dataset from the sidebar to run customer segmentation.")
 # Sidebar file upload
 st.sidebar.header("Upload Your Dataset")
 
