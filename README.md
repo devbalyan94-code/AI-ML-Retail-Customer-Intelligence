@@ -1,4 +1,17 @@
 # AI-ML-Retail-Customer-Intelligence
+# AI-ML Retail Customer Intelligence Dashboard
+
+Live App:
+https://ai-ml-retail-customer-intelligence.streamlit.app
+
+Technologies Used:
+- Python
+- Pandas
+- Scikit-learn
+- Streamlit
+- Machine Learning (KMeans)
+
+This project builds a customer segmentation system for retail analytics using machine learning.
 AI-ML Retail Customer Intelligence Dashboard Using Python, Machine Learning And Streamlit....
 This project builds a machine Learning powered dashboard to analyze customer purchasing behaviours.... in retail data.
 ## Features 
@@ -7,15 +20,6 @@ This project builds a machine Learning powered dashboard to analyze customer pur
 - Sales and Quantity Analysis
 - Customer Cluster Visualization
 - Download Customer Data Feature
-- ## Tech Stack
-
-Python  
-Pandas  
-NumPy  
-Scikit-Learn  
-Matplotlib  
-Seaborn  
-Streamlit  
 
 ## Dataset
 
