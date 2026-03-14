@@ -7,8 +7,8 @@ from sklearn.cluster import KMeans
 st.title("AI-ML Retail Customer Intelligence System")
 
 # Load data
-customer_data = pd.read_csv("../DATA/QVI_purchase_behaviour.csv")
-transaction_data = pd.read_excel("../DATA/QVI_transaction_data.xlsx")
+customer_data = pd.read_csv("QVI_purchase_behaviour.csv")
+transaction_data = pd.read_excel("QVI_transaction_data.xlsx")
 
 # Merge datasets
 data = pd.merge(transaction_data, customer_data, on="LYLTY_CARD_NBR")
