@@ -69,7 +69,31 @@ st.subheader("Customer Cluster Distribution")
 cluster_counts = customer_features["Cluster"].value_counts()
 
 st.bar_chart(cluster_counts)
+# Auto ML Insights
+st.subheader("AI Generated Business Insights")
 
+avg_sales = customer_features.groupby("Cluster")["TOT_SALES"].mean()
+avg_qty = customer_features.groupby("Cluster")["PROD_QTY"].mean()
+
+for cluster in avg_sales.index:
+    sales = round(avg_sales[cluster],2)
+    qty = round(avg_qty[cluster],2)
+
+    if sales > avg_sales.mean():
+        insight = "High value customers with strong purchasing behavior."
+    elif sales > avg_sales.mean()*0.7:
+        insight = "Moderate customers who buy occasionally."
+    else:
+        insight = "Low spending customers who may need targeted promotions."
+
+    st.write(f"""
+Cluster {cluster}
+
+Average Sales: {sales}  
+Average Quantity: {qty}
+
+Business Insight: {insight}
+""")
 customer_id = st.selectbox(
     "Select Customer ID",
     customer_features["LYLTY_CARD_NBR"]
