@@ -2,7 +2,7 @@
 # AI-ML Retail Customer Intelligence Dashboard
 
 Live App:
-https://ai-ml-retail-customer-intelligence.streamlit.app
+https://ai-ml-retail-customer-intelligence-n9wlqdij4txurtv5h5exh3.streamlit.app
 
 Technologies Used:
 - Python
